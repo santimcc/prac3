@@ -32,6 +32,26 @@ public class JavaApplication1 {
         return (suma / (mat.length * mat[0].length));
     }
     
+    public static int mejorNota(int[][]mat){
+        int notamax = mat[0][2];
+        for (int i = 0; i < mat[0].length; i++) {
+            if (notamax < mat[i][2]){
+                notamax = mat[i][2];
+            }
+            
+        }
+        return notamax;
+    }
+    
+    public static int mejor1y6 (int[][]mat){
+        int mejor = 0;
+        for (int i = 0; i < mat.length; i++) {
+            int[] is = mat[i];
+            
+        }
+        return mejor;
+    }
+    
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("filas: ");
@@ -52,8 +72,10 @@ public class JavaApplication1 {
         System.out.println("");
         System.out.println("");
         int[][]matrizR = matrizRandom(n,m);
+        matrizR[3][2] = 15;
         imprimirMat(matrizR);
         System.out.println("promedio: " + promGeneral(matrizR));
+        System.out.println("nota max en examen 3: " + mejorNota(matrizR));
         
 
         
